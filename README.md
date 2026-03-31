@@ -13,11 +13,11 @@ No server, no uploads, no dependencies - everything runs locally in the browser.
 
 ## Usage
 
-Open `dist/index.html` in any modern browser and drop your `.srt` files onto the page.
+Open `docs/index.html` in any modern browser and drop your `.srt` files onto the page.
 
 ```
 srt-to-vtt/
-├── dist/
+├── docs/
 │   ├── index.html     
 │   ├── style.css
 │   ├── srt2vtt.js     ← conversion logic
@@ -46,7 +46,7 @@ npm install
 npm test
 ```
 
-The core logic lives in `dist/srt2vtt.js` and exports `srtToVtt` and `vttFilename` as CommonJS for testing, while also working as plain browser globals.
+The core logic lives in `docs/srt2vtt.js` and exports `srtToVtt` and `vttFilename` as CommonJS for testing, while also working as plain browser globals.
 
 ## Tests
 

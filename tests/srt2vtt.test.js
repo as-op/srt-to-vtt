@@ -1,4 +1,4 @@
-const { srtToVtt, vttFilename } = require('../dist/srt2vtt');
+const { srtToVtt, vttFilename } = require('../docs/srt2vtt');
 
 // ─── srtToVtt ─────────────────────────────────────────────────────────────────
 
