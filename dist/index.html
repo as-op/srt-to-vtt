@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SRT to VTT Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>SRT → VTT Converter</h1>
+<p class="subtitle">Convert SubRip subtitles to WebVTT — runs entirely in your browser</p>
+
+<div class="card">
+
+  <div class="dropzone" id="dropzone">
+    <input type="file" id="file-input" accept=".srt" multiple>
+    <span class="dropzone-icon">📄</span>
+    <div class="dropzone-label"><span>Choose .srt files</span> or drag &amp; drop here</div>
+    <div class="dropzone-hint">Multiple files supported</div>
+  </div>
+
+  <div id="file-list">
+    <div id="empty-state">No files selected yet</div>
+  </div>
+
+  <div class="actions">
+    <button class="btn btn-primary" id="convert-btn" disabled>Convert all</button>
+    <button class="btn btn-secondary" id="download-all-btn" disabled>Download all</button>
+    <button class="btn btn-secondary" id="clear-btn" disabled>Clear</button>
+  </div>
+
+  <div id="preview-section">
+    <h2>Preview — <span id="preview-filename"></span></h2>
+    <pre id="preview-output"></pre>
+  </div>
+
+</div>
+
+<script src="srt2vtt.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

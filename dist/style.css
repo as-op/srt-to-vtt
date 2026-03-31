@@ -1,0 +1,206 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #0f0f13;
+  color: #e0e0e0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #fff;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: #1a1a22;
+  border: 1px solid #2a2a36;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 640px;
+}
+
+/* Drop zone */
+.dropzone {
+  border: 2px dashed #333;
+  border-radius: 8px;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  position: relative;
+}
+
+.dropzone:hover,
+.dropzone.drag-over {
+  border-color: #6c63ff;
+  background: rgba(108, 99, 255, 0.06);
+}
+
+.dropzone input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.dropzone-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  display: block;
+  color: #444;
+}
+
+.dropzone-label {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.dropzone-label span {
+  color: #6c63ff;
+  font-weight: 500;
+}
+
+.dropzone-hint {
+  font-size: 0.75rem;
+  color: #555;
+  margin-top: 0.4rem;
+}
+
+/* File list */
+#file-list {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 0.85rem;
+  background: #12121a;
+  border: 1px solid #2a2a36;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.file-item .name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #ccc;
+}
+
+.file-item .status {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.status-pending { background: #2a2a1a; color: #888; }
+.status-ok      { background: #0f2a1a; color: #4caf7d; }
+.status-error   { background: #2a0f0f; color: #e05555; }
+
+.file-item .download-btn {
+  background: #6c63ff;
+  color: #fff;
+  border: none;
+  padding: 0.25rem 0.65rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 500;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+
+.file-item .download-btn:hover    { background: #5a52e0; }
+.file-item .download-btn:disabled { background: #333; color: #666; cursor: default; }
+
+.file-item .preview-btn {
+  background: #2a2a44;
+}
+
+.file-item .preview-btn:not(:disabled):hover { background: #383860; }
+
+/* Buttons row */
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.btn {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  border-radius: 7px;
+  border: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+.btn:disabled { opacity: 0.4; cursor: default; }
+
+.btn-primary { background: #6c63ff; color: #fff; }
+.btn-primary:not(:disabled):hover { background: #5a52e0; }
+
+.btn-secondary { background: #2a2a36; color: #ccc; }
+.btn-secondary:not(:disabled):hover { background: #333344; }
+
+/* Preview */
+#preview-section {
+  margin-top: 1.5rem;
+  display: none;
+}
+
+#preview-section h2 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+#preview-output {
+  background: #0c0c12;
+  border: 1px solid #222;
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+  font-family: "SF Mono", "Fira Code", monospace;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: #8af;
+  max-height: 240px;
+  overflow-y: auto;
+  white-space: pre;
+}
+
+/* Empty state */
+#empty-state {
+  text-align: center;
+  color: #444;
+  font-size: 0.82rem;
+  padding: 0.5rem 0;
+}

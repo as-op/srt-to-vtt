@@ -1,0 +1,11 @@
+{
+  "name": "srt-to-vtt",
+  "version": "1.0.0",
+  "description": "Browser-based SRT to WebVTT converter",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}
