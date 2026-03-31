@@ -13,7 +13,9 @@ No server, no uploads, no dependencies - everything runs locally in the browser.
 
 ## Usage
 
-Open `docs/index.html` in any modern browser and drop your `.srt` files onto the page.
+Online: https://as-op.github.io/srt-to-vtt/
+
+Locally: Open `docs/index.html` in any modern browser and drop your `.srt` files onto the page.
 
 ```
 srt-to-vtt/
